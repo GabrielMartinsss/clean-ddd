@@ -1,4 +1,4 @@
-import { QuestionRepository } from '../repositories/questions-repository'
+import { QuestionsRepository } from '../repositories/questions-repository'
 
 interface EditQuestionUseCaseRequest {
   authorId: string
@@ -10,7 +10,7 @@ interface EditQuestionUseCaseRequest {
 interface EditQuestionUseCaseResponse {}
 
 export class EditQuestionUseCase {
-  constructor(private questionRepository: QuestionRepository) {}
+  constructor(private questionRepository: QuestionsRepository) {}
 
   async execute({
     authorId,
