@@ -1,6 +1,7 @@
 import { Question } from '../../enterprise/entities/question'
 
 export interface QuestionRepository {
+  save(question: Question): Promise<void>
   create(question: Question): Promise<void>
   delete(question: Question): Promise<void>
   findById(id: string): Promise<Question | null>
